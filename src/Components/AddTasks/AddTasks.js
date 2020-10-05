@@ -30,7 +30,7 @@ const AddTasks = () => {
 
 
     const submit = () => {
-        fetch('http://localhost:5000/addToCollection', {
+        fetch('https://lit-springs-45389.herokuapp.com/addToCollection', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(task)

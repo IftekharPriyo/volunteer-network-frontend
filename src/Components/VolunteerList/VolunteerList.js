@@ -8,7 +8,7 @@ const VolunteerList = () => {
     const[tasks,setTasks] = useState([])
         
         useEffect(()=>{
-            fetch('http://localhost:5000/allTasks')
+            fetch('https://lit-springs-45389.herokuapp.com/allTasks')
             .then(res=>res.json())
             .then(data=>setTasks(data))
         },[])

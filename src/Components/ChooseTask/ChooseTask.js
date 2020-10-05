@@ -29,7 +29,7 @@ const ChooseTask = () => {
     const description = selectedTask[0]?.description;
     const taskSummary = {...user,selectedDate,task,description,image};
     const submit =()=>{
-        fetch('http://localhost:5000/addTask',{
+        fetch('https://lit-springs-45389.herokuapp.com/addTask',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body:JSON.stringify(taskSummary)

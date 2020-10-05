@@ -11,7 +11,7 @@ const Individuals = () => {
     const [LoggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(()=>{
-        fetch('http://localhost:5000/onesTasks?email='+LoggedInUser.email)
+        fetch('https://lit-springs-45389.herokuapp.com/onesTasks?email='+LoggedInUser.email)
         .then(res=>res.json())
         .then(data=>setTasks(data))
     },[])
