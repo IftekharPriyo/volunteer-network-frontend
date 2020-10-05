@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
 import AllTasks from '../../DBTasks/AllTasks';
+import NavBar from '../NavBar/NavBar';
 import TasksCard from '../TasksCard/TasksCard';
 import './Dash.css';
 
@@ -8,6 +9,7 @@ const Dash = () => {
     const tasks = AllTasks();
     return (
         <div>
+            <NavBar></NavBar>
             <div>
             <h2 style={{textAlign:'center',fontWeight:'bolder'}} >I grow By Helping People in Need</h2>
             <div class="box">
