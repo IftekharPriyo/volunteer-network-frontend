@@ -40,13 +40,13 @@ const NavBar = () => {
         <div>
             <Grid container item xs={12} style={{ height: '60px', padding: '10px 20px' }} alignItems='center' >
                 <Grid item xs={7}>
-                    <img style={{ height: '60px' }} src={logoMain} alt="volunteer network logo" />
+                    <Link to='/'><img style={{ height: '60px' }} src={logoMain} alt="volunteer network logo" /></Link>
                 </Grid>
                 <Grid container item xs={5} justify='space-around' className='navs'>
                     <Link to='/' className='link'><b>Home</b></Link>
-                    <Link to='/donation' className='link'><b>Donation</b></Link>
-                    <Link to='/events' className='link'><b>Events</b></Link>
-                    <Link to='/blog' className='link'><b>Blog</b></Link>
+                    <Link to='/' className='link'><b>Donation</b></Link>
+                    <Link to='/' className='link'><b>Events</b></Link>
+                    <Link to='/' className='link'><b>Blog</b></Link>
                     {
                         LoggedInUser?.name ?
                             (   <Link to='/'>
@@ -54,12 +54,17 @@ const NavBar = () => {
                                 </Link>
                             ) :
                             (<Link to='/login'>
-                                <Button variant="contained" style={{ background: '#3F90FC', color: 'white' }}>
+                                <Button className='link' variant="outlined" color="primary">
                                     Register
                                 </Button>
                             </Link>
                             )
                     }
+                    {
+                    
+                        <Link to ='/admin'><Button className='link' variant="outlined" color="secondary">Admin</Button></Link>
+                    
+                }
                 </Grid>
             </Grid>
         </div>

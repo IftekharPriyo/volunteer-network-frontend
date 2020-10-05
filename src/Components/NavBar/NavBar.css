@@ -4,3 +4,11 @@
 .name{
     margin-bottom: 40px;
 }
+.link{
+    text-decoration: none;
+    color: grey;
+}
+
+.link:hover{
+    color: tomato;
+}

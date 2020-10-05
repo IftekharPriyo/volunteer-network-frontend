@@ -18,7 +18,7 @@ const ChooseTask = () => {
     const [user, setLoggedInUser] = useContext(UserContext)
     const {id} = useParams()
     const tasks = AllTasks()
-    const [selectedDate, setSelectedDate] = React.useState(new Date('2020-08-18T21:11:54'));
+    const [selectedDate, setSelectedDate] = React.useState(new Date('2020-08-18'));
     const [when, setWhen] = useState('December 12');
     const selectedTask = tasks.filter(tsk=>tsk._id===id);
     const handleDateChange = (date) => {
@@ -71,7 +71,7 @@ const ChooseTask = () => {
                         
                        
                     </form>
-                    <Link to='/eventTasks'><button onClick={submit} className="submit-btn" >Registration</button></Link>
+                    <Link to='/individuals'><button onClick={submit} className="submit-btn" >Registration</button></Link>
                 </div>
         </div>
         </div>
