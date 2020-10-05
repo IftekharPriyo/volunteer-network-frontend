@@ -11,7 +11,7 @@ const Dash = () => {
         <div>
             <NavBar></NavBar>
             <div>
-            <h2 style={{textAlign:'center',fontWeight:'bolder'}} >I grow By Helping People in Need</h2>
+            <h2 style={{textAlign:'center',fontWeight:'bolder'}} >I GROW BY HELPING PEOPLE IN NEED</h2>
             <div class="box">
             <input className="search-bar" type="search" id="search" placeholder="Search..." />
             <button className="search-btn">Search</button>

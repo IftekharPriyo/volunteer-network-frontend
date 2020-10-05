@@ -8,35 +8,7 @@ import './NavBar.css';
 
 const NavBar = () => {
     const [LoggedInUser, setLoggedInUser] = useContext(UserContext);
-    const location = useLocation();
     return (
-        // <div className="navigation" >
-        //     <Navbar style={{ marginBottom: '40px' }} collapseOnSelect expand="lg" bg="transparent">
-        //         <Link to='/'><Navbar.Brand> <img className="img-fluid logo" src={logoMain} alt="logo"></img></Navbar.Brand></Link>
-        //         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        //         <Navbar.Collapse id="responsive-navbar-nav">
-        //             <Nav className="mr-auto">
-        //                 <Nav.Link href='/' className="navigation-links">Home</Nav.Link>
-        //                 <Nav.Link className="navigation-links">Donation</Nav.Link>
-        //                 <Nav.Link className="navigation-links">Events</Nav.Link>
-        //                 <Nav.Link className="navigation-links">Blog</Nav.Link>
-        //                 {
-        //                     LoggedInUser?.name ?
-        //                         (
-        //                             <Nav.Link className="navigation-links">{LoggedInUser.name}</Nav.Link>
-        //                         ) :
-        //                         (<Link to='/login'>
-        //                             <button className="navigation-links register-btn">Register</button>
-        //                         </Link>
-        //                         )
-        //                 }
-
-        //             </Nav>
-
-        //         </Navbar.Collapse>
-        //     </Navbar>
-        // </div>
-
         <div>
             <Grid container item xs={12} style={{ height: '60px', padding: '10px 20px' }} alignItems='center' >
                 <Grid item xs={7}>
@@ -49,7 +21,7 @@ const NavBar = () => {
                     <Link to='/' className='link'><b>Blog</b></Link>
                     {
                         LoggedInUser?.name ?
-                            (   <Link to='/'>
+                            (   <Link to='/individuals'>
                                 <h4 className="name">{LoggedInUser.name}</h4>
                                 </Link>
                             ) :

@@ -5,8 +5,10 @@ import { Button } from '@material-ui/core';
 import './IndividualTaskCards.css'
 
 const IndividualTaskCards = (props) => {
+
     const[toggle,setToggle] = useState(false)
-    const{_id,name,email,selectedDate,task,image} = props.tsk;
+    const{_id,name,email,selectedDate,task,image} = props.tasks;
+
     const deleteTask = () =>{
         setToggle(true)
         fetch(`http://localhost:5000/delete/${_id}`,{

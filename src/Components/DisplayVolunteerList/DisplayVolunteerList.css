@@ -1,0 +1,13 @@
+.table-row{
+    font-family: 'Courier New', Courier, monospace;
+}
+.trash{
+    width:20px;
+    height:20px;
+}
+.trash-btn{
+    padding:5px;
+    background-color:#FF444A;
+    border:none;
+    border-radius:6px;
+}

@@ -8,27 +8,26 @@ import {
     MuiPickersUtilsProvider,
     KeyboardDatePicker,
 } from '@material-ui/pickers';
-import { TextareaAutosize } from '@material-ui/core';
 import './ChooseTask.css'
 import AllTasks from '../../DBTasks/AllTasks';
 import { UserContext } from '../../App';
 import logoMain from '../../logos/logoMain.png'
 
 const ChooseTask = () => {
-    const [user, setLoggedInUser] = useContext(UserContext)
-    const {id} = useParams()
-    const tasks = AllTasks()
+    const [user, setLoggedInUser] = useContext(UserContext);
+    const {id} = useParams();
+    const tasks = AllTasks();
     const [selectedDate, setSelectedDate] = React.useState(new Date('2020-08-18'));
     const [when, setWhen] = useState('December 12');
-    const selectedTask = tasks.filter(tsk=>tsk._id===id);
+    const selectedTask = tasks.filter(task=>task._id===id);
     const handleDateChange = (date) => {
         setSelectedDate(date);
     };
     
-    const task = selectedTask[0]?.task
-    const image = selectedTask[0]?.image
-    const description = selectedTask[0]?.description
-    const taskSummary = {...user,selectedDate,task,description,image}
+    const task = selectedTask[0]?.task;
+    const image = selectedTask[0]?.image;
+    const description = selectedTask[0]?.description;
+    const taskSummary = {...user,selectedDate,task,description,image};
     const submit =()=>{
         fetch('http://localhost:5000/addTask',{
             method: 'POST',

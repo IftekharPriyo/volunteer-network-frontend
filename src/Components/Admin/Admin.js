@@ -9,13 +9,13 @@ import VolunteerList from '../VolunteerList/VolunteerList';
 import './Admin.css'
 
 const Admin = () => {
-    const [regToggle,setRegToggle] = useState(false)
+    const [registered,setRegistered] = useState(false)
     return (
         <div>
         <div class="header">
          <Link to='/'><img src={logoMain} alt='logo' className='logo'></img></Link>
-         <h3 style={{marginLeft:'130px'}}>{
-             regToggle?'Volunteer Registration List':'Add Event'
+         <h3 style={{marginLeft:'130px',fontSize:'60px'}}>{
+             registered?'Volunteer Registration List':'Add Event'
          }</h3>
         </div>
 
@@ -23,16 +23,16 @@ const Admin = () => {
         <div class="col-3 menu">
             <ul>
             <li className={
-                regToggle?"toggleTrue"
+                registered?"toggleTrue"
                 :"toggleFalse"
             } onClick={()=>{
-                setRegToggle(true)
+                setRegistered(true)
             }}><img style={{marginRight:'10px'}} src={users} alt="users"></img>Volunteer Registration List</li>
             <li className={
-                regToggle?"toggleFalse"
+                registered?"toggleFalse"
                 :"toggleTrue"
             }  onClick={()=>{
-                setRegToggle(false)
+                setRegistered(false)
             }} ><img style={{marginRight:'10px',height:'30px',width:'30px'}} src={plus} alt="add"></img>Add Event</li>
             </ul>
         </div>
@@ -40,8 +40,8 @@ const Admin = () => {
         <div class="col-9">
             
             {
-                regToggle?(
-                    <VolunteerList></VolunteerList> 
+                registered?(
+                    <VolunteerList></VolunteerList>
                 ):(
                     <AddTasks></AddTasks>
                      

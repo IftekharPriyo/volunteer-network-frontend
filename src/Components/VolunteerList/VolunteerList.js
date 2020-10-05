@@ -1,11 +1,36 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
+import DisplayVolunteerList from '../DisplayVolunteerList/DisplayVolunteerList';
+import './VolunteerList.css'
 
 const VolunteerList = () => {
+    const[tasks,setTasks] = useState([])
+        
+        useEffect(()=>{
+            fetch('http://localhost:5000/allTasks')
+            .then(res=>res.json())
+            .then(data=>setTasks(data))
+        },[])
+
     return (
         <div>
-            <h1>test</h1>
+        <Table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Date</th>
+            <th>Task</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {
+              tasks.map(tsk=><DisplayVolunteerList key={tsk._id} tsk={tsk}></DisplayVolunteerList>)
+          }
+        </tbody>
+      </Table>
         </div>
     );
 };
