@@ -24,7 +24,7 @@ const Individuals = () => {
                 tasks.map(task=><IndividualTaskCards tasks={task}></IndividualTaskCards>)
             }
             </div>
-            <h3>New task will be added soon. Click on your name on NavBar to see.</h3>
+            <h3>New task will be added soon. Go to home-page and click on your name to see the update.</h3>
         </div>
     );
 };

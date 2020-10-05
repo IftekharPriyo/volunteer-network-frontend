@@ -13,8 +13,8 @@ const Admin = () => {
     return (
         <div>
         <div class="header">
-         <Link to='/'><img src={logoMain} alt='logo' className='logo'></img></Link>
-         <h3 style={{marginLeft:'130px',fontSize:'60px'}}>{
+         <Link to='/'><img src={logoMain} style={{ height: '60px' }} alt='logo' className='logo'></img></Link>
+         <h3 style={{marginLeft:'165px',fontSize:'20px'}}>{
              registered?'Volunteer Registration List':'Add Event'
          }</h3>
         </div>
