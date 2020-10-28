@@ -1,6 +1,6 @@
 # Volunteer Network
 
-#### A simple website where volunteers can login and register for some volunteering works in his preferable date. Also admin panel who can add tasks and maintain other stus as well.
+#### A simple website where volunteers can login and register for some volunteering works in his preferable date. Also admin panel who can add tasks and maintain other stuffs as well.
 [Website](https://volunteer-network-81239.web.app/)
 
 Technology Used
